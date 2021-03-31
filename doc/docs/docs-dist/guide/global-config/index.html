@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>全局配置 | http-hub</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="http://test.vis.github.com/static/http-hub-doc/assets/favicon.ico" id="favicon">
+    <meta name="description" content="">
+
+    <link rel="preload" href="/static/http-hub-doc/assets/css/0.styles.517a1fa1.css" as="style">
+    <link rel="preload" href="/static/http-hub-doc/assets/js/app.c2fbe515.js" as="script">
+    <link rel="preload" href="/static/http-hub-doc/assets/js/2.32a88301.js" as="script">
+    <link rel="preload" href="/static/http-hub-doc/assets/js/7.87d56121.js" as="script">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/10.25c5ddfb.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/11.19181d7b.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/12.9f2870d7.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/13.8206e067.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/14.725f6b57.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/15.8513d79e.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/16.36a24994.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/17.531d7dc4.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/3.38a5cb20.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/4.50ed0d50.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/5.5e2e2e20.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/6.9e1279cb.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/8.6ca00749.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/9.0b9f7650.js">
+    <link rel="stylesheet" href="/static/http-hub-doc/assets/css/0.styles.517a1fa1.css">
+</head>
+
+<body>
+    <div id="app" data-server-rendered="true">
+        <div class="theme-container">
+            <header class="navbar">
+                <div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon">
+                        <path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
+                    </svg></div> <a href="/f/http-hub-doc/" class="home-link router-link-active">
+                    <!----> <span class="site-name">http-hub</span> <span>1.0.0</span></a>
+                <div class="links">
+                    <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value="">
+                        <!---->
+                    </div>
+                    <nav class="nav-links can-hide">
+                        <div class="nav-item"><a href="/f/http-hub-doc/" class="nav-link">
+                                首页
+                            </a></div>
+                        <div class="nav-item"><a href="/f/http-hub-doc/guide/" class="nav-link router-link-active">
+                                指南
+                            </a></div>
+                        <div class="nav-item">
+                            <div class="dropdown-wrapper"><button type="button" aria-label="内置资源" class="dropdown-title"><span class="title">内置资源</span> <span class="arrow right"></span></button>
+                                <ul class="nav-dropdown" style="display:none;">
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/inner/api.html" class="nav-link">
+                                            API
+                                        </a></li>
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/inner/errorTemp.html" class="nav-link">
+                                            异常模板
+                                        </a></li>
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/inner/components.html" class="nav-link">
+                                            提示组件
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="dropdown-wrapper"><button type="button" aria-label="周边" class="dropdown-title"><span class="title">周边</span> <span class="arrow right"></span></button>
+                                <ul class="nav-dropdown" style="display:none;">
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/surrounding/extension/" class="nav-link">
+                                            vscode 扩展
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="dropdown-wrapper"><button type="button" aria-label="更新与反馈" class="dropdown-title"><span class="title">更新与反馈</span> <span class="arrow right"></span></button>
+                                <ul class="nav-dropdown" style="display:none;">
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/other/changelog/" class="nav-link">
+                                            更新日志
+                                        </a></li>
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/other/issue/" class="nav-link">
+                                            反馈
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!---->
+                    </nav>
+                </div>
+            </header>
+            <div class="sidebar-mask"></div>
+            <aside class="sidebar">
+                <nav class="nav-links">
+                    <div class="nav-item"><a href="/f/http-hub-doc/" class="nav-link">
+                            首页
+                        </a></div>
+                    <div class="nav-item"><a href="/f/http-hub-doc/guide/" class="nav-link router-link-active">
+                            指南
+                        </a></div>
+                    <div class="nav-item">
+                        <div class="dropdown-wrapper"><button type="button" aria-label="内置资源" class="dropdown-title"><span class="title">内置资源</span> <span class="arrow right"></span></button>
+                            <ul class="nav-dropdown" style="display:none;">
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/inner/api.html" class="nav-link">
+                                        API
+                                    </a></li>
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/inner/errorTemp.html" class="nav-link">
+                                        异常模板
+                                    </a></li>
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/inner/components.html" class="nav-link">
+                                        提示组件
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-wrapper"><button type="button" aria-label="周边" class="dropdown-title"><span class="title">周边</span> <span class="arrow right"></span></button>
+                            <ul class="nav-dropdown" style="display:none;">
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/surrounding/extension/" class="nav-link">
+                                        vscode 扩展
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-wrapper"><button type="button" aria-label="更新与反馈" class="dropdown-title"><span class="title">更新与反馈</span> <span class="arrow right"></span></button>
+                            <ul class="nav-dropdown" style="display:none;">
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/other/changelog/" class="nav-link">
+                                        更新日志
+                                    </a></li>
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/other/issue/" class="nav-link">
+                                        反馈
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!---->
+                </nav>
+                <ul class="sidebar-links">
+                    <li><a href="/f/http-hub-doc/guide/" aria-current="page" class="sidebar-link">介绍</a></li>
+                    <li><a href="/f/http-hub-doc/guide/install/" class="sidebar-link">安装使用</a></li>
+                    <li><a href="/f/http-hub-doc/guide/module/" class="sidebar-link">模块配置</a></li>
+                    <li><a href="/f/http-hub-doc/guide/usage/" class="sidebar-link">用法汇总</a></li>
+                    <li><a href="/f/http-hub-doc/guide/global-config/" aria-current="page" class="active sidebar-link">全局配置</a>
+                        <ul class="sidebar-sub-headers">
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/guide/global-config/#apis" class="sidebar-link">apis</a></li>
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/guide/global-config/#axiosconfig" class="sidebar-link">axiosConfig</a></li>
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/guide/global-config/#baseurl" class="sidebar-link">baseURL</a></li>
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/guide/global-config/#components" class="sidebar-link">components</a></li>
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/guide/global-config/#errortemp" class="sidebar-link">errorTemp</a></li>
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/guide/global-config/#cachetime" class="sidebar-link">cacheTime</a></li>
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/guide/global-config/#interceptors" class="sidebar-link">interceptors</a></li>
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/guide/global-config/#debug-模式" class="sidebar-link">debug 模式</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <main class="page">
+                <div class="theme-default-content content__default">
+                    <h1 id="全局配置"><a href="#全局配置" class="header-anchor">#</a> 全局配置</h1>
+                    <p>在<a href="/f/http-hub-doc/guide/install/#快速上手">快速上手</a>的第四节在 main.js 中引入并注册 http-hub 时只使用了其基本的配置，如果有更多需求可以查看下方更多的全局配置。</p>
+                    <p>一个完整的 http-hub 配置应该是以下内容：</p>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">const</span> httpHubConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  apis<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// api列表</span>
+  axiosConfig<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// axios配置</span>
+  baseURL<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 多base配置</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 自定义提示组件</span>
+  errorTemp<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 自定义异常模板</span>
+  cacheTime<span class="token operator">:</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span> <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token comment">// 接口缓存时间(ms)</span>
+  interceptors<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 自定义拦截器</span>
+    <span class="token function-variable function">request</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">response</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div>
+                    </div>
+                    <p>下面将介绍每一项的配置，其中带<b style="color:red;">*</b>的表示必填项</p>
+                    <h2 id="apis"><a href="#apis" class="header-anchor">#</a> apis<b style="color:red;">*</b></h2>
+                    <p>api 列表是必填项，如果没有 apis 引入时会报错。具体配置可以参考<a href="/f/http-hub-doc/guide/module/#api-列表配置">API 列表配置</a></p>
+                    <h2 id="axiosconfig"><a href="#axiosconfig" class="header-anchor">#</a> axiosConfig</h2>
+                    <p>虽然 axios 配置不是必填项，但是如果想发送一个成功的请求，配置 axios 是必不可少的（比如 baseURL）。参考<a href="http://axios-js.com/zh-cn/docs/index.html" target="_blank" rel="noopener noreferrer">axios 配置<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
+                                    <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path>
+                                    <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon>
+                                </svg> <span class="sr-only">(opens new window)</span></span></a></p>
+                    <h2 id="baseurl"><a href="#baseurl" class="header-anchor">#</a> baseURL</h2>
+                    <p>有些时候你的项目需要请求两个服务器地址，比如一个后台接口地址，一个 s3 文件服务地址，普通的 axios 配置是无法满足，因此可以采取配置 baseURL 的方式来实现。</p>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">const</span> baseURL <span class="token operator">=</span> <span class="token punctuation">{</span>
+  backend<span class="token operator">:</span> <span class="token string">'https://example.com/backend_server/'</span><span class="token punctuation">,</span>
+  s3<span class="token operator">:</span> <span class="token string">'https://example.com/s3_server/'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> httpHubConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  apis<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  axiosConfig<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  baseURL<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div>
+                    </div>
+                    <p>在将 baseURL 注入到<a href="/f/http-hub-doc/guide/global-config/" aria-current="page" class="router-link-exact-active router-link-active">httpHubConfig</a>后，就不再使用<span style="color:#3eaf7c;">$API</span>而是使用以下方式进行调用：</p>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token comment">// APP.vue</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>backend<span class="token punctuation">.</span>moduleName<span class="token punctuation">.</span><span class="token function">apiName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// https://example.com/backend_server/apiUrl</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>s3<span class="token punctuation">.</span>moduleName<span class="token punctuation">.</span><span class="token function">apiName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// https://example.com/s3_server/apiUrl</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div>
+                    </div>
+                    <h2 id="components"><a href="#components" class="header-anchor">#</a> components</h2>
+                    <p>http-hub 的内置异常提示模板包含了三个模块<a href="/f/http-hub-doc/API/">Message</a>，<a href="/f/http-hub-doc/API/">MessageBox</a>，<a href="/f/http-hub-doc/API/">Notice</a>。基本上可以满足日常需求，但是事情往往不遂人愿，有的时候你需要使用自己的主题，有的时候你的组件库并不是<a href="http://design.github.com/home/welcome" target="_blank" rel="noopener noreferrer">qaxd<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
+                                    <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path>
+                                    <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon>
+                                </svg> <span class="sr-only">(opens new window)</span></span></a>，因此 http-hub 为每个组件提供了 beforeRender 的组件配置的方式，你可以根据自己的业务场景酌情修改展示内容。</p>
+                    <p>比如你的项目中用了<a href="https://www.iviewui.com/" target="_blank" rel="noopener noreferrer">iview<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
+                                    <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path>
+                                    <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon>
+                                </svg> <span class="sr-only">(opens new window)</span></span></a>，可以参考下面的配置，将提示模板替换为自定义：</p>
+                    <div class="demo-wrap">
+                        <div class="demo-main">
+                            <!---->
+                        </div>
+                        <div class="demo-nav"><i class="demo-nav-btn"><svg t="1572515960134" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1097" width="20" height="20" class="icon">
+                                    <path d="M888 64H136q-30.016 0-51.008 20.992T64 136v752.992q0 28.992 20.992 50.496t51.008 21.504h752.992q28.992 0 50.496-21.504t21.504-50.496V136q0-30.016-21.504-51.008T888 64zM228.992 548.992q-15.008 0-25.504-10.496t-10.496-25.504 10.016-26.016l115.008-115.008-115.008-116.992q-10.016-11.008-10.016-25.504t10.496-24.992 25.504-10.496 24.992 10.016l140.992 142.016q10.016 11.008 10.016 26.016t-11.008 24.992l-140 140.992q-10.016 11.008-24.992 11.008z m389.024 0l-199.008-0.992q-15.008 0-25.504-10.496T383.008 512t10.496-25.504 25.504-10.496l199.008 0.992q15.008 0 25.504 10.496t10.496 25.504-11.008 25.504-24.992 10.496z" p-id="1098"></path>
+                                </svg></i></div>
+                        <div class="demo-code">
+                            <div class="demo-code-nav"><button class="demo-code-btn active">Script</button></div>
+                            <div class="demo-code-content">
+                                <div class="demo-code-item">
+                                    <div class="language-js line-numbers-mode">
+                                        <pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Message<span class="token punctuation">,</span> Modal<span class="token punctuation">,</span> Notice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'view-design'</span>
+
+<span class="token keyword">const</span> components <span class="token operator">=</span> <span class="token punctuation">{</span>
+  message<span class="token operator">:</span> <span class="token punctuation">{</span>
+    comp<span class="token operator">:</span> Message<span class="token punctuation">,</span>
+    <span class="token function">beforeRender</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> message <span class="token punctuation">}</span> <span class="token operator">=</span> err<span class="token punctuation">;</span>
+      config<span class="token punctuation">.</span>content <span class="token operator">=</span> message<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> config
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  notice<span class="token operator">:</span> <span class="token punctuation">{</span>
+    comp<span class="token operator">:</span> Notice<span class="token punctuation">,</span>
+    <span class="token function">beforeRender</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> message <span class="token punctuation">}</span> <span class="token operator">=</span> err<span class="token punctuation">;</span>
+      config<span class="token punctuation">.</span>duration <span class="token operator">=</span> <span class="token number">3</span>
+      config<span class="token punctuation">.</span>desc <span class="token operator">=</span> message<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> config
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  modal<span class="token operator">:</span> <span class="token punctuation">{</span>
+    comp<span class="token operator">:</span> Modal<span class="token punctuation">,</span>
+    <span class="token function-variable function">beforeRender</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> code<span class="token punctuation">,</span> message <span class="token punctuation">}</span> <span class="token operator">=</span> err
+      config<span class="token punctuation">.</span>okText <span class="token operator">=</span> <span class="token string">'确定'</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">===</span> <span class="token number">401</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        config<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">'登录过期'</span>
+        config<span class="token punctuation">.</span>content <span class="token operator">=</span> message
+        config<span class="token punctuation">.</span><span class="token function-variable function">onOk</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">// redirect logout..</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        config<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">'接口请求失败'</span>
+        config<span class="token punctuation">.</span>content <span class="token operator">=</span> message
+        config<span class="token punctuation">.</span><span class="token function-variable function">onOk</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">// do sth...</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> config
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre>
+                                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div>
+                                    </div>
+                                </div> <i class="demo-code-content-copy"><svg t="1572585974849" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1695" width="20" height="20" class="icon" style="fill:#fff;">
+                                        <path d="M866.461538 39.384615H354.461538c-43.323077 0-78.769231 35.446154-78.76923 78.769231v39.384616h472.615384c43.323077 0 78.769231 35.446154 78.769231 78.76923v551.384616h39.384615c43.323077 0 78.769231-35.446154 78.769231-78.769231V118.153846c0-43.323077-35.446154-78.769231-78.769231-78.769231z m-118.153846 275.692308c0-43.323077-35.446154-78.769231-78.76923-78.769231H157.538462c-43.323077 0-78.769231 35.446154-78.769231 78.769231v590.769231c0 43.323077 35.446154 78.769231 78.769231 78.769231h512c43.323077 0 78.769231-35.446154 78.76923-78.769231V315.076923z m-354.461538 137.846154c0 11.815385-7.876923 19.692308-19.692308 19.692308h-157.538461c-11.815385 0-19.692308-7.876923-19.692308-19.692308v-39.384615c0-11.815385 7.876923-19.692308 19.692308-19.692308h157.538461c11.815385 0 19.692308 7.876923 19.692308 19.692308v39.384615z m157.538461 315.076923c0 11.815385-7.876923 19.692308-19.692307 19.692308H216.615385c-11.815385 0-19.692308-7.876923-19.692308-19.692308v-39.384615c0-11.815385 7.876923-19.692308 19.692308-19.692308h315.076923c11.815385 0 19.692308 7.876923 19.692307 19.692308v39.384615z m78.769231-157.538462c0 11.815385-7.876923 19.692308-19.692308 19.692308H216.615385c-11.815385 0-19.692308-7.876923-19.692308-19.692308v-39.384615c0-11.815385 7.876923-19.692308 19.692308-19.692308h393.846153c11.815385 0 19.692308 7.876923 19.692308 19.692308v39.384615z" p-id="1696"></path>
+                                    </svg></i>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <p>有的时候，你只是想修改内置的提示组件而不是提供新的组件，去掉 comp 字段即可</p>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">const</span> components <span class="token operator">=</span> <span class="token punctuation">{</span>
+  message<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">beforeRender</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      config<span class="token punctuation">.</span>duration <span class="token operator">=</span> <span class="token number">0</span>
+      <span class="token keyword">return</span> config
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> httpHubConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  apis<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  axiosConfig<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  components<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>属性</th>
+                                <th>描述</th>
+                                <th>类型</th>
+                                <th>默认值</th>
+                                <th>tips</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>comp</td>
+                                <td>自定义组件</td>
+                                <td>components</td>
+                                <td>内置组件</td>
+                                <td>去掉该字段并搭配 config 字段则可以重写内置组件</td>
+                            </tr>
+                            <tr>
+                                <td>beforeRender</td>
+                                <td>展示之前的钩子</td>
+                                <td>function</td>
+                                <td>null</td>
+                                <td>需要搭配自定义组件使用，第一个参数是异常信息，第二个参数是组件配置，可以更灵活的配置展示信息</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="custom-block danger">
+                        <p class="custom-block-title">必看！</p>
+                        <p>如果传入了 comp，那么必须要根据你传入对应组件的配置字段(content, title, onOk)来配置 beforeRender,并且将配置结果返回。否则 http-hub 将抛出异常！</p>
+                    </div>
+                    <h2 id="errortemp"><a href="#errortemp" class="header-anchor">#</a> errorTemp</h2>
+                    <p>http-hub 已经内置了一套<a href="/f/http-hub-doc/inner/errorTemp.html">异常模板</a>，涵盖了 0，-1000，200，201，202，203，204，401，403，404，500，503 等状态码，如果无法满足业务需求，可以对该模板进行<span style="color:#3eaf7c;">覆盖、扩充</span>操作。你只需要按照格式传入你需要变更或者扩充的异常模板，http-hub 会自动帮你进行<span style="color:#3eaf7c;">智能合并</span>✿✿ ヽ(°▽°)ノ ✿。</p>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">const</span> errorTemp <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string">'200'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'success'</span><span class="token punctuation">,</span> <span class="token comment">// 会根据type来判断是否抛出异常，success则不抛出</span>
+    message<span class="token operator">:</span> <span class="token string">'请求成功'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'-1001'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'接口异常'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> httpHubConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  apis<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  axiosConfig<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  errorTemp<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>属性</th>
+                                <th>描述</th>
+                                <th>类型</th>
+                                <th>tips</th>
+                                <th>必填</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>type</td>
+                                <td>提示类型</td>
+                                <td>string</td>
+                                <td>error info warning success</td>
+                                <td>是</td>
+                            </tr>
+                            <tr>
+                                <td>logType</td>
+                                <td>使用的异常组件</td>
+                                <td>string</td>
+                                <td>message modal notice</td>
+                                <td>type 为 success 可不填</td>
+                            </tr>
+                            <tr>
+                                <td>message</td>
+                                <td>异常信息</td>
+                                <td>string</td>
+                                <td>http-hub 会首先获取服务端返回信息，再取此字段</td>
+                                <td>信息从后端获取可不填</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 id="cachetime"><a href="#cachetime" class="header-anchor">#</a> cacheTime</h2>
+                    <p>http-hub 内置了响应缓存功能，默认关闭。如果有需求可以设置 cacheTime 来开启，时间的基本单位为<strong>ms</strong></p>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">const</span> cacheTime <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment">// mm</span>
+<span class="token keyword">const</span> httpHubConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  apis<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  axiosConfig<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  cacheTime<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div>
+                    </div>
+                    <p>响应缓存的逻辑如下：</p>
+                    <p><img src="/f/http-hub-doc/assets/img/storage.fe1232db.jpg" alt="缓存流程"></p>
+                    <h2 id="interceptors"><a href="#interceptors" class="header-anchor">#</a> interceptors</h2>
+                    <p>http-hub 为用户提供了更灵活的拦截器配置，你可以根据自己的需求调整自己的请求、拦截器逻辑。你需要配置你的 interceptors</p>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">const</span> interceptors <span class="token operator">=</span> <span class="token punctuation">{</span>
+  request<span class="token operator">:</span> <span class="token operator">...</span><span class="token punctuation">,</span>
+  response<span class="token operator">:</span> <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> httpHubConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  apis<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  axiosConfig<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  interceptors
+<span class="token punctuation">}</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div>
+                    </div>
+                    <h3 id="request-请求拦截器"><a href="#request-请求拦截器" class="header-anchor">#</a> request 请求拦截器</h3>
+                    <p>request 必须是一个函数，只有一个 config 参数，其内容是请求的原生配置。你需要做的就是增加或者修改 config 并且将它返回。</p>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token function-variable function">request</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// do something ..</span>
+  <span class="token keyword">return</span> config
+<span class="token punctuation">}</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div>
+                    </div>
+                    <h3 id="response-响应拦截器"><a href="#response-响应拦截器" class="header-anchor">#</a> response 响应拦截器</h3>
+                    <p>如果你的后端接口返回的内容不能满足 http-hub 约定的<strong>返回结构</strong>(code, data, message)，那么你需要自己配置响应拦截器从而达到适配的目的。response 必须是一个函数，只有一个 res 参数，其内容是 axios 的全量返回内容(headers,config,data,....)。你需要做的就是重新包装 res.data 并返回 res。</p>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token function-variable function">response</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// decorate your res.data</span>
+  <span class="token keyword">return</span> res
+<span class="token punctuation">}</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div>
+                    </div>
+                    <h2 id="debug-模式"><a href="#debug-模式" class="header-anchor">#</a> debug 模式</h2>
+                    <p>http-hub 为用户提供了 debug 模式，默认开启。你可以根据 process.env.NODE_ENV 并将其放入 use 的第三个参数来开启或关闭 debug 模式。</p>
+                    <div class="custom-block tip">
+                        <p class="custom-block-title">TIP</p>
+                        <p>在开启 debug 模式后，会在控制台显示一些帮助排查问题的告警。</p>
+                    </div>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code>Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>HttpHub<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token operator">...</span>httpHubConfig <span class="token punctuation">}</span><span class="token punctuation">,</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'development'</span><span class="token punctuation">)</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div>
+                    </div>
+                </div>
+                <footer class="page-edit">
+                    <!---->
+                    <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">3/24/2021, 7:17:03 PM</span></div>
+                </footer>
+                <div class="page-nav">
+                    <p class="inner"><span class="prev">
+                            ←
+                            <a href="/f/http-hub-doc/guide/usage/" class="prev">
+                                用法汇总
+                            </a></span>
+                        <!---->
+                    </p>
+                </div>
+            </main>
+        </div>
+        <div class="global-ui"></div>
+    </div>
+    <script src="/static/http-hub-doc/assets/js/app.c2fbe515.js" defer></script>
+    <script src="/static/http-hub-doc/assets/js/2.32a88301.js" defer></script>
+    <script src="/static/http-hub-doc/assets/js/7.87d56121.js" defer></script>
+</body>
+
+</html>

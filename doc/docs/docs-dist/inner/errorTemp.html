@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>异常模板 | http-hub</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="http://test.vis.github.com/static/http-hub-doc/assets/favicon.ico" id="favicon">
+    <meta name="description" content="">
+
+    <link rel="preload" href="/static/http-hub-doc/assets/css/0.styles.517a1fa1.css" as="style">
+    <link rel="preload" href="/static/http-hub-doc/assets/js/app.c2fbe515.js" as="script">
+    <link rel="preload" href="/static/http-hub-doc/assets/js/2.32a88301.js" as="script">
+    <link rel="preload" href="/static/http-hub-doc/assets/js/15.8513d79e.js" as="script">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/10.25c5ddfb.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/11.19181d7b.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/12.9f2870d7.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/13.8206e067.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/14.725f6b57.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/16.36a24994.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/17.531d7dc4.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/3.38a5cb20.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/4.50ed0d50.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/5.5e2e2e20.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/6.9e1279cb.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/7.87d56121.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/8.6ca00749.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/9.0b9f7650.js">
+    <link rel="stylesheet" href="/static/http-hub-doc/assets/css/0.styles.517a1fa1.css">
+</head>
+
+<body>
+    <div id="app" data-server-rendered="true">
+        <div class="theme-container">
+            <header class="navbar">
+                <div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon">
+                        <path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
+                    </svg></div> <a href="/f/http-hub-doc/" class="home-link router-link-active">
+                    <!----> <span class="site-name">http-hub</span> <span>1.0.0</span></a>
+                <div class="links">
+                    <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value="">
+                        <!---->
+                    </div>
+                    <nav class="nav-links can-hide">
+                        <div class="nav-item"><a href="/f/http-hub-doc/" class="nav-link">
+                                首页
+                            </a></div>
+                        <div class="nav-item"><a href="/f/http-hub-doc/guide/" class="nav-link">
+                                指南
+                            </a></div>
+                        <div class="nav-item">
+                            <div class="dropdown-wrapper"><button type="button" aria-label="内置资源" class="dropdown-title"><span class="title">内置资源</span> <span class="arrow right"></span></button>
+                                <ul class="nav-dropdown" style="display:none;">
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/inner/api.html" class="nav-link">
+                                            API
+                                        </a></li>
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/inner/errorTemp.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+                                            异常模板
+                                        </a></li>
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/inner/components.html" class="nav-link">
+                                            提示组件
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="dropdown-wrapper"><button type="button" aria-label="周边" class="dropdown-title"><span class="title">周边</span> <span class="arrow right"></span></button>
+                                <ul class="nav-dropdown" style="display:none;">
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/surrounding/extension/" class="nav-link">
+                                            vscode 扩展
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="dropdown-wrapper"><button type="button" aria-label="更新与反馈" class="dropdown-title"><span class="title">更新与反馈</span> <span class="arrow right"></span></button>
+                                <ul class="nav-dropdown" style="display:none;">
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/other/changelog/" class="nav-link">
+                                            更新日志
+                                        </a></li>
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/other/issue/" class="nav-link">
+                                            反馈
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!---->
+                    </nav>
+                </div>
+            </header>
+            <div class="sidebar-mask"></div>
+            <aside class="sidebar">
+                <nav class="nav-links">
+                    <div class="nav-item"><a href="/f/http-hub-doc/" class="nav-link">
+                            首页
+                        </a></div>
+                    <div class="nav-item"><a href="/f/http-hub-doc/guide/" class="nav-link">
+                            指南
+                        </a></div>
+                    <div class="nav-item">
+                        <div class="dropdown-wrapper"><button type="button" aria-label="内置资源" class="dropdown-title"><span class="title">内置资源</span> <span class="arrow right"></span></button>
+                            <ul class="nav-dropdown" style="display:none;">
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/inner/api.html" class="nav-link">
+                                        API
+                                    </a></li>
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/inner/errorTemp.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+                                        异常模板
+                                    </a></li>
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/inner/components.html" class="nav-link">
+                                        提示组件
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-wrapper"><button type="button" aria-label="周边" class="dropdown-title"><span class="title">周边</span> <span class="arrow right"></span></button>
+                            <ul class="nav-dropdown" style="display:none;">
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/surrounding/extension/" class="nav-link">
+                                        vscode 扩展
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-wrapper"><button type="button" aria-label="更新与反馈" class="dropdown-title"><span class="title">更新与反馈</span> <span class="arrow right"></span></button>
+                            <ul class="nav-dropdown" style="display:none;">
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/other/changelog/" class="nav-link">
+                                        更新日志
+                                    </a></li>
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/other/issue/" class="nav-link">
+                                        反馈
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!---->
+                </nav>
+                <ul class="sidebar-links">
+                    <li><a href="/f/http-hub-doc/inner/api.html" class="sidebar-link">API</a></li>
+                    <li><a href="/f/http-hub-doc/inner/errorTemp.html" aria-current="page" class="active sidebar-link">异常模板</a></li>
+                    <li><a href="/f/http-hub-doc/inner/components.html" class="sidebar-link">异常提示组件</a></li>
+                </ul>
+            </aside>
+            <main class="page">
+                <div class="theme-default-content content__default">
+                    <h1 id="异常模板"><a href="#异常模板" class="header-anchor">#</a> 异常模板</h1>
+                    <p>内置异常模板如下所示，你可以根据自己的业务或者后端的要求来新建你的异常模板来覆盖 http-hub 内置异常模板，参考<a href="/f/http-hub-doc/guide/global-config/#errortemp">errorTemp</a>：</p>
+                    <div class="demo-wrap">
+                        <div class="demo-main">
+                            <!---->
+                        </div>
+                        <div class="demo-nav"><i class="demo-nav-btn"><svg t="1572515960134" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1097" width="20" height="20" class="icon">
+                                    <path d="M888 64H136q-30.016 0-51.008 20.992T64 136v752.992q0 28.992 20.992 50.496t51.008 21.504h752.992q28.992 0 50.496-21.504t21.504-50.496V136q0-30.016-21.504-51.008T888 64zM228.992 548.992q-15.008 0-25.504-10.496t-10.496-25.504 10.016-26.016l115.008-115.008-115.008-116.992q-10.016-11.008-10.016-25.504t10.496-24.992 25.504-10.496 24.992 10.016l140.992 142.016q10.016 11.008 10.016 26.016t-11.008 24.992l-140 140.992q-10.016 11.008-24.992 11.008z m389.024 0l-199.008-0.992q-15.008 0-25.504-10.496T383.008 512t10.496-25.504 25.504-10.496l199.008 0.992q15.008 0 25.504 10.496t10.496 25.504-11.008 25.504-24.992 10.496z" p-id="1098"></path>
+                                </svg></i></div>
+                        <div class="demo-code">
+                            <div class="demo-code-nav"><button class="demo-code-btn active">Script</button></div>
+                            <div class="demo-code-content">
+                                <div class="demo-code-item">
+                                    <div class="language-js line-numbers-mode">
+                                        <pre class="language-js"><code><span class="token keyword">const</span> errorTemp <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string">'0'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'success'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'请求成功'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'-1000'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'接口资源请求失败'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'201'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'验证码错误!'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'202'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'用户名或密码错误'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'204'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'warning'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'该账号已被锁定，请稍后重试'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'203'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'warning'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'该用户未激活，请联系管理员'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'401'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'confirm'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'modal'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'未认证无法访问！'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'403'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'你无权访问此资源或执行该操作！'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'404'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'接口未找到'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'500'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'服务器异常'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'503'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'warning'</span><span class="token punctuation">,</span>
+    logType<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">'服务器过载'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre>
+                                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br></div>
+                                    </div>
+                                </div> <i class="demo-code-content-copy"><svg t="1572585974849" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1695" width="20" height="20" class="icon" style="fill:#fff;">
+                                        <path d="M866.461538 39.384615H354.461538c-43.323077 0-78.769231 35.446154-78.76923 78.769231v39.384616h472.615384c43.323077 0 78.769231 35.446154 78.769231 78.76923v551.384616h39.384615c43.323077 0 78.769231-35.446154 78.769231-78.769231V118.153846c0-43.323077-35.446154-78.769231-78.769231-78.769231z m-118.153846 275.692308c0-43.323077-35.446154-78.769231-78.76923-78.769231H157.538462c-43.323077 0-78.769231 35.446154-78.769231 78.769231v590.769231c0 43.323077 35.446154 78.769231 78.769231 78.769231h512c43.323077 0 78.769231-35.446154 78.76923-78.769231V315.076923z m-354.461538 137.846154c0 11.815385-7.876923 19.692308-19.692308 19.692308h-157.538461c-11.815385 0-19.692308-7.876923-19.692308-19.692308v-39.384615c0-11.815385 7.876923-19.692308 19.692308-19.692308h157.538461c11.815385 0 19.692308 7.876923 19.692308 19.692308v39.384615z m157.538461 315.076923c0 11.815385-7.876923 19.692308-19.692307 19.692308H216.615385c-11.815385 0-19.692308-7.876923-19.692308-19.692308v-39.384615c0-11.815385 7.876923-19.692308 19.692308-19.692308h315.076923c11.815385 0 19.692308 7.876923 19.692307 19.692308v39.384615z m78.769231-157.538462c0 11.815385-7.876923 19.692308-19.692308 19.692308H216.615385c-11.815385 0-19.692308-7.876923-19.692308-19.692308v-39.384615c0-11.815385 7.876923-19.692308 19.692308-19.692308h393.846153c11.815385 0 19.692308 7.876923 19.692308 19.692308v39.384615z" p-id="1696"></path>
+                                    </svg></i>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="page-edit">
+                    <!---->
+                    <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">3/18/2021, 3:57:49 PM</span></div>
+                </footer>
+                <div class="page-nav">
+                    <p class="inner"><span class="prev">
+                            ←
+                            <a href="/f/http-hub-doc/inner/api.html" class="prev">
+                                API
+                            </a></span> <span class="next"><a href="/f/http-hub-doc/inner/components.html">
+                                异常提示组件
+                            </a>
+                            →
+                        </span></p>
+                </div>
+            </main>
+        </div>
+        <div class="global-ui"></div>
+    </div>
+    <script src="/static/http-hub-doc/assets/js/app.c2fbe515.js" defer></script>
+    <script src="/static/http-hub-doc/assets/js/2.32a88301.js" defer></script>
+    <script src="/static/http-hub-doc/assets/js/15.8513d79e.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{
+    "name": "@vislab/http-hub",
+    "version": "1.0.0",
+    "description": "http请求集中管理与客户端异常捕获工具",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "webpack --config webpack.config.js --progress",
+        "dev": "cross-env NODE_ENV=development webpack --watch --progress",
+        "docs:dev": "cd doc && yarn dev",
+        "docs:build": "cd doc && yarn build"
+    },
+    "keywords": [
+        "axios",
+        "http",
+        "errorHandler"
+    ],
+    "author": "wangxiang01",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "blueimp-md5": "^2.18.0",
+        "deepmerge": "1.2.0",
+        "lodash": "^4.17.15",
+        "path-to-regexp": "^6.1.0",
+        "qs": "^6.9.4",
+        "vue": "^2.6.12"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.9",
+        "@babel/plugin-proposal-object-rest-spread": "^7.13.0",
+        "@babel/plugin-transform-runtime": "^7.12.1",
+        "@babel/preset-env": "^7.12.7",
+        "@babel/runtime": "^7.12.5",
+        "autoprefixer": "^10.2.4",
+        "babel-loader": "^8.2.2",
+        "cross-env": "^7.0.3",
+        "css-loader": "^5.0.1",
+        "file-loader": "^6.2.0",
+        "less": "^3.12.2",
+        "less-loader": "^7.1.0",
+        "postcss-loader": "4.2.0",
+        "style-loader": "^2.0.0",
+        "url-loader": "^4.1.1",
+        "vue-loader": "^15.9.6",
+        "vue-template-compiler": "^2.6.12",
+        "webpack": "^4.39.0",
+        "webpack-cli": "^4.2.0",
+        "webpack-dev-server": "^3.11.0"
+    }
+}

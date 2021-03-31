@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>异常提示组件 | http-hub</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="http://test.vis.github.com/static/http-hub-doc/assets/favicon.ico" id="favicon">
+    <meta name="description" content="">
+
+    <link rel="preload" href="/static/http-hub-doc/assets/css/0.styles.517a1fa1.css" as="style">
+    <link rel="preload" href="/static/http-hub-doc/assets/js/app.c2fbe515.js" as="script">
+    <link rel="preload" href="/static/http-hub-doc/assets/js/2.32a88301.js" as="script">
+    <link rel="preload" href="/static/http-hub-doc/assets/js/14.725f6b57.js" as="script">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/10.25c5ddfb.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/11.19181d7b.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/12.9f2870d7.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/13.8206e067.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/15.8513d79e.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/16.36a24994.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/17.531d7dc4.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/3.38a5cb20.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/4.50ed0d50.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/5.5e2e2e20.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/6.9e1279cb.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/7.87d56121.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/8.6ca00749.js">
+    <link rel="prefetch" href="/static/http-hub-doc/assets/js/9.0b9f7650.js">
+    <link rel="stylesheet" href="/static/http-hub-doc/assets/css/0.styles.517a1fa1.css">
+</head>
+
+<body>
+    <div id="app" data-server-rendered="true">
+        <div class="theme-container">
+            <header class="navbar">
+                <div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon">
+                        <path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
+                    </svg></div> <a href="/f/http-hub-doc/" class="home-link router-link-active">
+                    <!----> <span class="site-name">http-hub</span> <span>1.0.0</span></a>
+                <div class="links">
+                    <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value="">
+                        <!---->
+                    </div>
+                    <nav class="nav-links can-hide">
+                        <div class="nav-item"><a href="/f/http-hub-doc/" class="nav-link">
+                                首页
+                            </a></div>
+                        <div class="nav-item"><a href="/f/http-hub-doc/guide/" class="nav-link">
+                                指南
+                            </a></div>
+                        <div class="nav-item">
+                            <div class="dropdown-wrapper"><button type="button" aria-label="内置资源" class="dropdown-title"><span class="title">内置资源</span> <span class="arrow right"></span></button>
+                                <ul class="nav-dropdown" style="display:none;">
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/inner/api.html" class="nav-link">
+                                            API
+                                        </a></li>
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/inner/errorTemp.html" class="nav-link">
+                                            异常模板
+                                        </a></li>
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/inner/components.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+                                            提示组件
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="dropdown-wrapper"><button type="button" aria-label="周边" class="dropdown-title"><span class="title">周边</span> <span class="arrow right"></span></button>
+                                <ul class="nav-dropdown" style="display:none;">
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/surrounding/extension/" class="nav-link">
+                                            vscode 扩展
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="dropdown-wrapper"><button type="button" aria-label="更新与反馈" class="dropdown-title"><span class="title">更新与反馈</span> <span class="arrow right"></span></button>
+                                <ul class="nav-dropdown" style="display:none;">
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/other/changelog/" class="nav-link">
+                                            更新日志
+                                        </a></li>
+                                    <li class="dropdown-item">
+                                        <!----> <a href="/f/http-hub-doc/other/issue/" class="nav-link">
+                                            反馈
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!---->
+                    </nav>
+                </div>
+            </header>
+            <div class="sidebar-mask"></div>
+            <aside class="sidebar">
+                <nav class="nav-links">
+                    <div class="nav-item"><a href="/f/http-hub-doc/" class="nav-link">
+                            首页
+                        </a></div>
+                    <div class="nav-item"><a href="/f/http-hub-doc/guide/" class="nav-link">
+                            指南
+                        </a></div>
+                    <div class="nav-item">
+                        <div class="dropdown-wrapper"><button type="button" aria-label="内置资源" class="dropdown-title"><span class="title">内置资源</span> <span class="arrow right"></span></button>
+                            <ul class="nav-dropdown" style="display:none;">
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/inner/api.html" class="nav-link">
+                                        API
+                                    </a></li>
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/inner/errorTemp.html" class="nav-link">
+                                        异常模板
+                                    </a></li>
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/inner/components.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+                                        提示组件
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-wrapper"><button type="button" aria-label="周边" class="dropdown-title"><span class="title">周边</span> <span class="arrow right"></span></button>
+                            <ul class="nav-dropdown" style="display:none;">
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/surrounding/extension/" class="nav-link">
+                                        vscode 扩展
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-wrapper"><button type="button" aria-label="更新与反馈" class="dropdown-title"><span class="title">更新与反馈</span> <span class="arrow right"></span></button>
+                            <ul class="nav-dropdown" style="display:none;">
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/other/changelog/" class="nav-link">
+                                        更新日志
+                                    </a></li>
+                                <li class="dropdown-item">
+                                    <!----> <a href="/f/http-hub-doc/other/issue/" class="nav-link">
+                                        反馈
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!---->
+                </nav>
+                <ul class="sidebar-links">
+                    <li><a href="/f/http-hub-doc/inner/api.html" class="sidebar-link">API</a></li>
+                    <li><a href="/f/http-hub-doc/inner/errorTemp.html" class="sidebar-link">异常模板</a></li>
+                    <li><a href="/f/http-hub-doc/inner/components.html" aria-current="page" class="active sidebar-link">异常提示组件</a>
+                        <ul class="sidebar-sub-headers">
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/inner/components.html#message" class="sidebar-link">Message</a></li>
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/inner/components.html#messagebox" class="sidebar-link">MessageBox</a></li>
+                            <li class="sidebar-sub-header"><a href="/f/http-hub-doc/inner/components.html#notice" class="sidebar-link">Notice</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <main class="page">
+                <div class="theme-default-content content__default">
+                    <h1 id="异常提示组件"><a href="#异常提示组件" class="header-anchor">#</a> 异常提示组件</h1>
+                    <p>http-hub 为用户内置了一套异常提示组件，包含 Message、MessageBox、Notice，如果内置不满足可以<a href="/f/http-hub-doc/guide/usage/#异常捕获">局部覆盖</a>，也可以进行<a href="/f/http-hub-doc/guide/global-config/#components">全局配置</a>。</p>
+                    <h2 id="message"><a href="#message" class="header-anchor">#</a> Message</h2>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Message <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vislab/http-hub'</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div>
+                    </div>
+                    <p>此时调用方法为 <code>Message(options)</code> 。我们也为每个 type 定义了各自的方法，如 <code>Message.success(options)</code> 。并且可以调用 <code>Message.closeAll()</code> 手动关闭所有实例。</p>
+                    <h3 id="options"><a href="#options" class="header-anchor">#</a> Options</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>说明</th>
+                                <th>类型</th>
+                                <th>可选值</th>
+                                <th>默认值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>message</td>
+                                <td>消息文字</td>
+                                <td>string / VNode</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>主题</td>
+                                <td>string</td>
+                                <td>success/warning/info/error</td>
+                                <td>info</td>
+                            </tr>
+                            <tr>
+                                <td>iconClass</td>
+                                <td>自定义图标的类名，会覆盖 <code>type</code></td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>dangerouslyUseHTMLString</td>
+                                <td>是否将 message 属性作为 HTML 片段处理</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td>customClass</td>
+                                <td>自定义类名</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>duration</td>
+                                <td>显示时间, 毫秒。设为 0 则不会自动关闭</td>
+                                <td>number</td>
+                                <td>—</td>
+                                <td>3000</td>
+                            </tr>
+                            <tr>
+                                <td>showClose</td>
+                                <td>是否显示关闭按钮</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td>center</td>
+                                <td>文字是否居中</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td>onClose</td>
+                                <td>关闭时的回调函数, 参数为被关闭的 message 实例</td>
+                                <td>function</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>offset</td>
+                                <td>Message 距离窗口顶部的偏移量</td>
+                                <td>number</td>
+                                <td>—</td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 id="messagebox"><a href="#messagebox" class="header-anchor">#</a> MessageBox</h2>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> MessageBox <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vislab/http-hub'</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div>
+                    </div>
+                    <p>我们提供了四个全局方法的调用方法依次为：MessageBox, MessageBox.alert, MessageBox.confirm 和 MessageBox.prompt。</p>
+                    <h3 id="options-2"><a href="#options-2" class="header-anchor">#</a> Options</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>说明</th>
+                                <th>类型</th>
+                                <th>可选值</th>
+                                <th>默认值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>title</td>
+                                <td>MessageBox 标题</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>message</td>
+                                <td>MessageBox 消息正文内容</td>
+                                <td>string / VNode</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>dangerouslyUseHTMLString</td>
+                                <td>是否将 message 属性作为 HTML 片段处理</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>消息类型，用于显示图标</td>
+                                <td>string</td>
+                                <td>success / info / warning / error</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>iconClass</td>
+                                <td>自定义图标的类名，会覆盖 <code>type</code></td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>customClass</td>
+                                <td>MessageBox 的自定义类名</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>callback</td>
+                                <td>若不使用 Promise，可以使用此参数指定 MessageBox 关闭后的回调</td>
+                                <td>function(action, instance)，action 的值为'confirm', 'cancel'或'close', instance 为 MessageBox 实例，可以通过它访问实例上的属性和方法</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>showClose</td>
+                                <td>MessageBox 是否显示右上角关闭按钮</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>true</td>
+                            </tr>
+                            <tr>
+                                <td>beforeClose</td>
+                                <td>MessageBox 关闭前的回调，会暂停实例的关闭</td>
+                                <td>function(action, instance, done)，action 的值为'confirm', 'cancel'或'close'；instance 为 MessageBox 实例，可以通过它访问实例上的属性和方法；done 用于关闭 MessageBox 实例</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>distinguishCancelAndClose</td>
+                                <td>是否将取消（点击取消按钮）与关闭（点击关闭按钮或遮罩层、按下 ESC 键）进行区分</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td>lockScroll</td>
+                                <td>是否在 MessageBox 出现时将 body 滚动锁定</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>true</td>
+                            </tr>
+                            <tr>
+                                <td>showCancelButton</td>
+                                <td>是否显示取消按钮</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false（以 confirm 和 prompt 方式调用时为 true）</td>
+                            </tr>
+                            <tr>
+                                <td>showConfirmButton</td>
+                                <td>是否显示确定按钮</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>true</td>
+                            </tr>
+                            <tr>
+                                <td>cancelButtonText</td>
+                                <td>取消按钮的文本内容</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>取消</td>
+                            </tr>
+                            <tr>
+                                <td>confirmButtonText</td>
+                                <td>确定按钮的文本内容</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>确定</td>
+                            </tr>
+                            <tr>
+                                <td>cancelButtonClass</td>
+                                <td>取消按钮的自定义类名</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>confirmButtonClass</td>
+                                <td>确定按钮的自定义类名</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>closeOnClickModal</td>
+                                <td>是否可通过点击遮罩关闭 MessageBox</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>true（以 alert 方式调用时为 false）</td>
+                            </tr>
+                            <tr>
+                                <td>closeOnPressEscape</td>
+                                <td>是否可通过按下 ESC 键关闭 MessageBox</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>true（以 alert 方式调用时为 false）</td>
+                            </tr>
+                            <tr>
+                                <td>closeOnHashChange</td>
+                                <td>是否在 hashchange 时关闭 MessageBox</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>true</td>
+                            </tr>
+                            <tr>
+                                <td>showInput</td>
+                                <td>是否显示输入框</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false（以 prompt 方式调用时为 true）</td>
+                            </tr>
+                            <tr>
+                                <td>inputPlaceholder</td>
+                                <td>输入框的占位符</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>inputType</td>
+                                <td>输入框的类型</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>text</td>
+                            </tr>
+                            <tr>
+                                <td>inputValue</td>
+                                <td>输入框的初始文本</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>inputPattern</td>
+                                <td>输入框的校验表达式</td>
+                                <td>regexp</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>inputValidator</td>
+                                <td>输入框的校验函数。可以返回布尔值或字符串，若返回一个字符串, 则返回结果会被赋值给 inputErrorMessage</td>
+                                <td>function</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>inputErrorMessage</td>
+                                <td>校验未通过时的提示文本</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>输入的数据不合法!</td>
+                            </tr>
+                            <tr>
+                                <td>center</td>
+                                <td>是否居中布局</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td>roundButton</td>
+                                <td>是否使用圆角按钮</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 id="notice"><a href="#notice" class="header-anchor">#</a> Notice</h2>
+                    <div class="language-javascript line-numbers-mode">
+                        <pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Notice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vislab/http-hub'</span>
+</code></pre>
+                        <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div>
+                    </div>
+                    <p>此时调用方法为 <code>Notice(options)</code> 。我们也为每个 type 定义了各自的方法，如 <code>Notice.success(options)</code> 。并且可以调用 <code>Notice.closeAll()</code> 手动关闭所有实例。</p>
+                    <h3 id="options-3"><a href="#options-3" class="header-anchor">#</a> Options</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>说明</th>
+                                <th>类型</th>
+                                <th>可选值</th>
+                                <th>默认值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>title</td>
+                                <td>标题</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>message</td>
+                                <td>说明文字</td>
+                                <td>string/Vue. VNode</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>dangerouslyUseHTMLString</td>
+                                <td>是否将 message 属性作为 HTML 片段处理</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>主题样式，如果不在可选值内将被忽略</td>
+                                <td>string</td>
+                                <td>success/warning/info/error</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>iconClass</td>
+                                <td>自定义图标的类名。若设置了 <code>type</code> ，则 <code>iconClass</code> 会被覆盖</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>customClass</td>
+                                <td>自定义类名</td>
+                                <td>string</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>duration</td>
+                                <td>显示时间, 毫秒。设为 0 则不会自动关闭</td>
+                                <td>number</td>
+                                <td>—</td>
+                                <td>4500</td>
+                            </tr>
+                            <tr>
+                                <td>position</td>
+                                <td>自定义弹出位置</td>
+                                <td>string</td>
+                                <td>top-right/top-left/bottom-right/bottom-left</td>
+                                <td>top-right</td>
+                            </tr>
+                            <tr>
+                                <td>showClose</td>
+                                <td>是否显示关闭按钮</td>
+                                <td>boolean</td>
+                                <td>—</td>
+                                <td>true</td>
+                            </tr>
+                            <tr>
+                                <td>onClose</td>
+                                <td>关闭时的回调函数</td>
+                                <td>function</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>onClick</td>
+                                <td>点击 Notification 时的回调函数</td>
+                                <td>function</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>offset</td>
+                                <td>偏移的距离，在同一时刻，所有的 Notification 实例应当具有一个相同的偏移量</td>
+                                <td>number</td>
+                                <td>—</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <footer class="page-edit">
+                    <!---->
+                    <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">3/3/2021, 6:46:27 PM</span></div>
+                </footer>
+                <div class="page-nav">
+                    <p class="inner"><span class="prev">
+                            ←
+                            <a href="/f/http-hub-doc/inner/errorTemp.html" class="prev">
+                                异常模板
+                            </a></span>
+                        <!---->
+                    </p>
+                </div>
+            </main>
+        </div>
+        <div class="global-ui"></div>
+    </div>
+    <script src="/static/http-hub-doc/assets/js/app.c2fbe515.js" defer></script>
+    <script src="/static/http-hub-doc/assets/js/2.32a88301.js" defer></script>
+    <script src="/static/http-hub-doc/assets/js/14.725f6b57.js" defer></script>
+</body>
+
+</html>
