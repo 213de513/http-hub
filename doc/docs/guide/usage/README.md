@@ -4,7 +4,7 @@
 
 ```javascript
 // api/module/login.js
-import { compositionURL } from '@vislab/http-hub'
+import { compositionURL } from 'vue-http-hub'
 const base = '/auth'
 const apiList = [
   {
@@ -43,7 +43,7 @@ export default compositionURL(base, apiList)
 
 ```javascript
 // /api/module/user.js
-import { compositionURL } from '@vislab/http-hub'
+import { compositionURL } from 'vue-http-hub'
 const base = '/user'
 const apiList = [
   {
@@ -80,7 +80,7 @@ http-hub 目前支持的后端返回数据结构为如下所示，如结构不�
 
 ```javascript
 // /api/module/user.js
-import { compositionURL } from '@vislab/http-hub'
+import { compositionURL } from 'vue-http-hub'
 const base = '/user'
 const apiList = [
   {
@@ -123,7 +123,7 @@ export default compositionURL(base, apiList)
 
 ```javascript
 // /api/module/user.js
-import { compositionURL } from '@vislab/http-hub'
+import { compositionURL } from 'vue-http-hub'
 const base = '/user'
 const apiList = [
   {
@@ -166,7 +166,7 @@ export default compositionURL(base, apiList)
 
 ```javascript
 // /api/module/demo.js
-import { compositionURL } from '@vislab/http-hub'
+import { compositionURL } from 'vue-http-hub'
 const base = ''
 const apiList = [
   {
@@ -222,7 +222,7 @@ http-hub 为用户提供了一个[errorHandler](/inner/api.html#errorhandler)方
 http-hub 默认为你提供了成功响应缓存功能，如果需要可以全局开启以及像如下为某个 api 开启，单位为 ms
 
 ```javascript
-import { compositionURL } from '@vislab/http-hub'
+import { compositionURL } from 'vue-http-hub'
 const base = '/user'
 const apiList = [
   {
@@ -268,7 +268,7 @@ http-hub 仅支持 post, get, put, delete, patch 五种请求方式，因此在�
 那么将 eolinker.json 放入项目中 api 的 module 中，并修改 index.js 为
 
 ```JS
-import { moduleToApi } from "@vislab/http-hub";
+import { moduleToApi } from "vue-http-hub";
 const modulesFiles = require.context("./module", true, /\.(js|json)$/);
 export default moduleToApi(modulesFiles);
 ```

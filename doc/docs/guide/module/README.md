@@ -80,7 +80,7 @@ export default {
 
 ```javascript
 // /api/module/user.js
-import { compositionURL } from '@vislab/http-hub'
+import { compositionURL } from 'vue-http-hub'
 const BASE = '/user'
 const API_LIST = [
   {
@@ -106,7 +106,7 @@ export default compositionURL(BASE, API_LIST)
 
 ```javascript
 // /api/index.js
-import { moduleToApi } from '@vislab/http-hub'
+import { moduleToApi } from 'vue-http-hub'
 const modulesFiles = require.context('./module', true, /\.js$/)
 export default moduleToApi(modulesFiles)
 ```

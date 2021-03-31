@@ -14,7 +14,7 @@ export default {
     }
   },
   mounted () {
-    import('@vislab/http-hub').then(module => {
+    import('vue-http-hub').then(module => {
       console.log(module)
       this.apiHub = module.apiHub
       this.getApiInstance = module.getApiInstance

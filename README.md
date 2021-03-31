@@ -1,6 +1,6 @@
 ## http-hub 是什么？
 
-<p style="text-indent:2em">http-hub 顾名思义 http 请求中心，即是一款 http 请求集中管理和统一异常捕获的工具。可以帮助用户在开发阶段将 http 请求相关配置集中管理起来，在网络层将请求和响应进行有效拦截，在响应过程中如遇异常则会根据<a href="/inner/errorTemp.html">异常模板</a>将异常抛出至应用层，并为应用层提供提供了一个<a href="/inner/api.html#errorhandler">异常捕获API</a>，可以一行代码实现不同异常场景的捕获。</p>
+<p style="text-indent:2em">http-hub 顾名思义 http 请求中心，即是一款 http 请求集中管理和统一异常捕获的工具。可以帮助用户在开发阶段将 http 请求相关配置集中管理起来，在网络层将请求和响应进行有效拦截，在响应过程中如遇异常则会根据<a href="javascript:0">异常模板</a>将异常抛出至应用层，并为应用层提供提供了一个<a href="javascript:0">异常捕获API</a>，可以一行代码实现不同异常场景的捕获。</p>
 
 ## 我为什么要用 http-hub？
 
@@ -16,3 +16,7 @@
 - eolinker 里写了一堆接口，没办法直接在项目里用，还需要在项目再写一遍
 
 以上问题，在 http-hub 的加持下已经不再是问题，用户要做的就是按需配置，按需调用。剩下的就全交给 http-hub 了 😊
+
+## 仓库地址
+
+https://github.com/213de513/http-hub
