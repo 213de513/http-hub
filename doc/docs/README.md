@@ -12,5 +12,5 @@ features:
     details: 为用户在应用层提供了一套统一的异常捕获解决方案，一行代码应对多种业务场景。
   - title: 灵活配置
     details: 用户可以根据业务需求灵活配置，快速打造一套适配产线的http-hub开发环境。
-footer: Copyright © 2021-present 444838468@qq.com
+footer: Copyright © 2021-present  444838468@qq.com
 ---

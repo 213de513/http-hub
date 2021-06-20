@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { errorTemp } from '../config/global';
 import { formatError, formateServerStatus, showError, showWaring } from './errorFormat'
-import { isObject } from 'lodash'
+import { isObject, cloneDeep, isUndefined } from 'lodash'
 import RequestMap from './requestMap'
 
 class Http extends RequestMap {
@@ -52,7 +52,9 @@ class Http extends RequestMap {
     //响应拦截器
     instance.interceptors.response.use(
       response => {
-        if (response.status === 200) {
+        const HTTP_STATUS = String(response.status)
+        const statusFirstNumber = HTTP_STATUS.split('')[0]
+        if (statusFirstNumber === '2') {
           if (this.responseInterceptors) {
             response = this.responseInterceptors(response)
             if (!response) {
@@ -61,26 +63,43 @@ class Http extends RequestMap {
           }
           const result = response.data;
           const status = result.code;
-          const errorTemp = this.errTemp
-          if (errorTemp[status] && errorTemp[status].type && errorTemp[status].type === 'success') {
+          if (isUndefined(status)) {
+            // 没code 自然就不符合原始schema 走异构逻辑
             this.setPending(response.config, response, null)
-            return response;
+            response.data = {
+              code: 0,
+              data: cloneDeep(response.data),
+              message: '请求成功！'
+            }
+            return response
           } else {
-            const errInfo = formateServerStatus({
-              status,
-              result,
-              response
-            }, errorTemp)
-            this.setPending(response.config, null, errInfo)
-            return Promise.reject(errInfo)
+            const errorTemp = this.errTemp
+            if (errorTemp[status] && errorTemp[status].type && errorTemp[status].type === 'success') {
+              this.setPending(response.config, response, null)
+              return response;
+            } else {
+              const errInfo = formateServerStatus({
+                status,
+                result,
+                response
+              }, errorTemp)
+              this.setPending(response.config, null, errInfo)
+              return Promise.reject(errInfo)
+            }
           }
         } else {
+          if (!(response.data && response.data.data)) {
+            response.data = {
+              data: cloneDeep(response.data)
+            }
+          }
           this.setPending(response.config, response, null)
           return response
         }
       },
       error => {
         if (error instanceof Error && error.response) {
+          // 普通异常 4xx 5xx
           const errInfo = formatError(error, this.errTemp)
           this.setPending(error.response.config, null, errInfo) // 设置error
           return Promise.reject(errInfo)

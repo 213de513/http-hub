@@ -41,7 +41,7 @@ const errorTemp = {
     message: '该用户未激活，请联系管理员'
   },
   '401': {
-    type: 'confirm',
+    type: 'error',
     logType: 'modal',
     message: '未认证无法访问！'
   },

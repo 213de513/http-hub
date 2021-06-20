@@ -23,6 +23,7 @@ class Logger {
         Object.assign(loggerMap, components, apiComp) // 合并组件
         this.logType = toLower(logType) // 弹窗类型
         this.loggerComp = loggerMap[this.logType] // 当前的提示组件
+        console.log(loggerMap)
         !this.loggerComp && throwError(`自定义异常模板中 ${code} 的logType定义错误`)
         this.err = err
         this.code = code // 接口状态码
@@ -48,7 +49,9 @@ class Logger {
         let compConfig = {
             title: '资源请求失败',
             message: this.message,
+            type: this.statsType,
             confirmButtonText: '确定',
+            closeOnClickModal: false,
             callback: () => {
                 console.log('confirm clicked！')
             }
@@ -67,7 +70,8 @@ class Logger {
         if (this.userOverride) {
             this.setCompConfig(compConfig)
         } else {
-            this.loggerComp[this.statsType]({
+            this.loggerComp({
+                type: this.statsType,
                 title: '接口请求失败',
                 message: this.message
             })

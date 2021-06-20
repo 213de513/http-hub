@@ -3,7 +3,7 @@
 ## apiHub
 
 ```javascript
-import { apiHub } from 'vue-http-hub'
+import { apiHub } from '@vislab/http-hub'
 await apiHub.$API.moduleName.apiName() // 返回一个Promise
 ```
 
@@ -20,7 +20,7 @@ apiHub 是经过 http-hub 编译之后的 http 请求的集合，在一些无法
 apiInstance
 
 ```javascript
-import { getApiInstance } from 'vue-http-hub'
+import { getApiInstance } from '@vislab/http-hub'
 const API = getApiInstance('/secret')
 await API.moduleName.apiName() // 返回一个Promise
 ```
@@ -45,7 +45,7 @@ getApiInstance 是一个可以快速获取 API 实例的方法，其返回值是
 null
 
 ```javascript
-import { apiHub, errorHandler } from 'vue-http-hub'
+import { apiHub, errorHandler } from '@vislab/http-hub'
 apiHub.$API.moduleName.apiName().catch((err) => {
   errorHandler(err)
 })
@@ -69,7 +69,7 @@ compositionURL 可以帮助你组合 base 和 url，最终返回一个组合好�
 ### 例子
 
 ```javascript
-import { compositionURL } from 'vue-http-hub'
+import { compositionURL } from '@vislab/http-hub'
 const base = '/user'
 const apiList = [
   {
@@ -104,7 +104,7 @@ moduleToApi 帮助你自动装载 api 模块资源并组合成 http-hub 可以�
 ### 例子
 
 ```javascript
-import { moduleToApi } from 'vue-http-hub'
+import { moduleToApi } from '@vislab/http-hub'
 const modulesFiles = require.context('./module', true, /\.js$/)
 export default moduleToApi(modulesFiles)
 ```
@@ -126,7 +126,7 @@ null
 ### 例子
 
 ```javascript
-import { downloadFile } from 'vue-http-hub'
+import { downloadFile } from '@vislab/http-hub'
 btn.onclick = () => {
   downloadFile('/s3_server/demo', '_self', '好好学习')
 }

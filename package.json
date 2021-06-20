@@ -1,6 +1,6 @@
 {
-    "name": "vue-http-hub",
-    "version": "1.0.0",
+    "name": "@vislab/http-hub",
+    "version": "1.1.0",
     "description": "http请求集中管理与客户端异常捕获工具",
     "main": "lib/index.js",
     "scripts": {
@@ -14,7 +14,7 @@
         "http",
         "errorHandler"
     ],
-    "author": "213de513",
+    "author": "wangxiang01",
     "license": "ISC",
     "dependencies": {
         "axios": "^0.19.2",

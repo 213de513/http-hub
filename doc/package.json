@@ -1,6 +1,6 @@
 {
     "name": "http-hub-docs",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
@@ -11,7 +11,7 @@
         "vuepress": "^1.8.2"
     },
     "dependencies": {
-        "vue-http-hub": "^1.0.0",
+        "@vislab/http-hub": "^1.0.0",
         "async-validator": "1.11.5",
         "element-ui": "^2.15.1"
     }

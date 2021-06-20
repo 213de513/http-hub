@@ -1,0 +1,30 @@
+stages:
+  - deploy
+
+# dev
+job_deploy_httphub_doc_dev:
+  tags:
+    - sti-cbb
+  only:
+    - dev
+  when: manual
+  stage: deploy
+  when: manual
+  environment:
+    name: development
+    url: http://test.vis.github.cn/f/http-hub-doc
+  script:
+    - rsync -av doc/docs/docs-dist/**  /var/falcon-static-www/static-test/http-hub-doc
+
+# pro
+job_deploy_httphub_doc_pro:
+  tags:
+    - sti-cbb
+  only:
+    - master
+  stage: deploy
+  environment:
+    name: production
+    url: http://vis.github.cn/http-hub-doc
+  script:
+    - rsync -av doc/docs/docs-dist/**  /var/falcon-static-www/static/http-hub-doc

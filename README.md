@@ -17,6 +17,10 @@
 
 以上问题，在 http-hub 的加持下已经不再是问题，用户要做的就是按需配置，按需调用。剩下的就全交给 http-hub 了 😊
 
+## 文档地址
+
+http://vis.github.cn/f/http-hub-doc/
+
 ## 仓库地址
 
-https://github.com/213de513/http-hub
+https://git-biz.github.cn/bda/CBB-construction/cbb/http-hub

@@ -5,7 +5,7 @@ http-hub 为用户内置了一套异常提示组件，包含 Message、MessageBo
 ## Message
 
 ```javascript
-import { Message } from 'vue-http-hub'
+import { Message } from '@vislab/http-hub'
 ```
 
 此时调用方法为 `Message(options)` 。我们也为每个 type 定义了各自的方法，如 `Message.success(options)` 。并且可以调用 `Message.closeAll()` 手动关闭所有实例。
@@ -28,7 +28,7 @@ import { Message } from 'vue-http-hub'
 ## MessageBox
 
 ```javascript
-import { MessageBox } from 'vue-http-hub'
+import { MessageBox } from '@vislab/http-hub'
 ```
 
 我们提供了四个全局方法的调用方法依次为：MessageBox, MessageBox.alert, MessageBox.confirm 和 MessageBox.prompt。
@@ -70,7 +70,7 @@ import { MessageBox } from 'vue-http-hub'
 ## Notice
 
 ```javascript
-import { Notice } from 'vue-http-hub'
+import { Notice } from '@vislab/http-hub'
 ```
 
 此时调用方法为 `Notice(options)` 。我们也为每个 type 定义了各自的方法，如 `Notice.success(options)` 。并且可以调用 `Notice.closeAll()` 手动关闭所有实例。

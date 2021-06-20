@@ -25,7 +25,7 @@ export default ({
     apis,
     axiosConfig: {
       baseURL:
-        'https://api.github.com/mockApi/vZ3Sun7d4a043c66cccbe79595a2191a9db1f38dac56a9e',
+        'https://api.github.cn/mockApi/vZ3Sun7d4a043c66cccbe79595a2191a9db1f38dac56a9e',
       timeout: 100000,
     },
   })

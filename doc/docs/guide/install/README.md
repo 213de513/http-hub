@@ -1,7 +1,7 @@
 ## 安装
 
 ```sh
-yarn add vue-http-hub # npm install vue-http-hub --save
+yarn add @vislab/http-hub # npm install @vislab/http-hub --save
 ```
 
 ## 快速上手
@@ -20,7 +20,7 @@ vue create http-hub-starter
 2. 进入根目录并安装
 
 ```sh
-cd http-hub-starter && yarn add vue-http-hub
+cd http-hub-starter && yarn add @vislab/http-hub
 ```
 
 3. 在 src 中创建 api 文件夹并创建第一个 api 列表
@@ -43,13 +43,13 @@ export default {
 
 ```javascript
 // 其中‘@’为src的别名
-import HttpHub from 'vue-http-hub'
+import HttpHub from '@vislab/http-hub'
 import apis from '@/api'
 Vue.use(HttpHub, {
   apis,
   axiosConfig: {
     baseURL:
-      'https://api.github.com/mockApi/vZ3Sun7d4a043c66cccbe79595a2191a9db1f38dac56a9e',
+      'https://api.github.cn/mockApi/vZ3Sun7d4a043c66cccbe79595a2191a9db1f38dac56a9e',
     timeout: 100000,
   },
 })

@@ -17,7 +17,7 @@ const IS_PRO = mode === 'production';
 const is_test = mode === 'test';
 const baseURL = IS_PRO ? '/f/http-hub-doc/' : is_test ? '/' : '/'
 const STATIC_PATH = IS_PRO ? `/static/http-hub-doc/` : is_test ? '/' : '/'
-const FaviconPath = IS_PRO ? `http://test.vis.github.com/static/http-hub-doc/assets/favicon.ico` : is_test ? '/' : 'assets/favicon.ico'
+const FaviconPath = IS_PRO ? `http://test.vis.github.cn/static/http-hub-doc/assets/favicon.ico` : is_test ? '/' : 'assets/favicon.ico'
 
 
 module.exports = {

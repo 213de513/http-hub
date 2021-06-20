@@ -1,18 +1,18 @@
 # 用法汇总
 
-## 基础用法
+:::tip
+点击下方中的所有 demo 并在 F12 中查看网络请求，以便更清楚的了解请求过程。
+:::
+
+## query 传参
+
+在日常开发中，get、delete 请求方法一般传参数需要携带 query 参数。在这两种情况下，将请求参数注入方法的第一个参数，则将自动携带至 query 中。
 
 ```javascript
 // api/module/login.js
-import { compositionURL } from 'vue-http-hub'
+import { compositionURL } from '@vislab/http-hub'
 const base = '/auth'
 const apiList = [
-  {
-    name: 'postLogin',
-    url: '/login',
-    method: 'post',
-    desc: '用户登录',
-  },
   {
     name: 'getLogin',
     url: '/checkLogin',
@@ -23,27 +23,81 @@ const apiList = [
 export default compositionURL(base, apiList)
 ```
 
-:::tip
-可以点击下方中的所有 demo 并在 F12 中查看网络请求结果
-:::
+<RecoDemo>
+<template slot="code-template">
+<<< @/docs/.vuepress/components/base/query.vue?template
+</template>
+<template slot="code-script">
+<<< @/docs/.vuepress/components/base/query.vue?script
+</template>
+<api-query slot="demo"></api-query>
+</RecoDemo>
+
+## request body 传参
+
+在日常开发中，post、put、patch 请求方法一般传参数需要携带 request body 参数。在这三种情况下，将请求参数注入方法的第一个参数，则将自动携带至 request body 中。
+
+```javascript
+// api/module/login.js
+import { compositionURL } from '@vislab/http-hub'
+const base = '/auth'
+const apiList = [
+  {
+    name: 'postLogin',
+    url: '/login',
+    method: 'post',
+    desc: '用户登录',
+  },
+]
+export default compositionURL(base, apiList)
+```
 
 <RecoDemo>
 <template slot="code-template">
-<<< @/docs/.vuepress/components/base/index.vue?template
+<<< @/docs/.vuepress/components/base/reqBody.vue?template
 </template>
 <template slot="code-script">
-<<< @/docs/.vuepress/components/base/index.vue?script
+<<< @/docs/.vuepress/components/base/reqBody.vue?script
 </template>
-<api-base slot="demo"></api-base>
+<api-req-body slot="demo"></api-req-body>
 </RecoDemo>
 
-## 动态 url 传参
+## 混合传参
+
+在日常开发中，post、put、patch 也可能会携带 query 参数，将请求参数注入方法的第二个参数，则将自动携带至 query 中。
+
+```javascript
+// api/module/login.js
+import { compositionURL } from '@vislab/http-hub'
+const base = '/auth'
+const apiList = [
+  {
+    name: 'postLogin',
+    url: '/login',
+    method: 'post',
+    desc: '用户登录',
+  },
+]
+export default compositionURL(base, apiList)
+```
+
+<RecoDemo>
+<template slot="code-template">
+<<< @/docs/.vuepress/components/base/mix.vue?template
+</template>
+<template slot="code-script">
+<<< @/docs/.vuepress/components/base/mix.vue?script
+</template>
+<api-mix slot="demo"></api-mix>
+</RecoDemo>
+
+## URL 传参
 
 可以通过”:“来控制变量，从而动态生成请求地址，在发送请求时，第一个参数要传对应的变量，比如下面的 <b>username</b>
 
 ```javascript
 // /api/module/user.js
-import { compositionURL } from 'vue-http-hub'
+import { compositionURL } from '@vislab/http-hub'
 const base = '/user'
 const apiList = [
   {
@@ -80,7 +134,7 @@ http-hub 目前支持的后端返回数据结构为如下所示，如结构不�
 
 ```javascript
 // /api/module/user.js
-import { compositionURL } from 'vue-http-hub'
+import { compositionURL } from '@vislab/http-hub'
 const base = '/user'
 const apiList = [
   {
@@ -123,7 +177,7 @@ export default compositionURL(base, apiList)
 
 ```javascript
 // /api/module/user.js
-import { compositionURL } from 'vue-http-hub'
+import { compositionURL } from '@vislab/http-hub'
 const base = '/user'
 const apiList = [
   {
@@ -166,7 +220,7 @@ export default compositionURL(base, apiList)
 
 ```javascript
 // /api/module/demo.js
-import { compositionURL } from 'vue-http-hub'
+import { compositionURL } from '@vislab/http-hub'
 const base = ''
 const apiList = [
   {
@@ -222,7 +276,7 @@ http-hub 为用户提供了一个[errorHandler](/inner/api.html#errorhandler)方
 http-hub 默认为你提供了成功响应缓存功能，如果需要可以全局开启以及像如下为某个 api 开启，单位为 ms
 
 ```javascript
-import { compositionURL } from 'vue-http-hub'
+import { compositionURL } from '@vislab/http-hub'
 const base = '/user'
 const apiList = [
   {
@@ -254,21 +308,20 @@ export default compositionURL(base, apiList)
 
 ## 搭配 eolinker
 
-http-hub 推荐与[eolinker](https://api.github.com/)搭配使用，支持解析 eolinker 导出的 json 接口文件。在 eolinker 中需要配置好基本信息。**PS**: API 名称尽量使用英文，虽然可以使用中文调用，但是为了避免不必要的麻烦，请选择英文。
-http-hub 仅支持 post, get, put, delete, patch 五种请求方式，因此在配置时也要选择这五种其一。创建时应该注意：
+http-hub 推荐与[eolinker](https://api.github.cn/)搭配使用，支持解析 eolinker 导出的 json 接口文件。在 eolinker 中需要配置基本信息。
+:::warning
+http-hub 目前仅支持 post, get, put, delete, patch 五种请求方式，因此在配置时也要选择这五种其一。
+:::
 
-![基本信息](~@img/img/eolinker/base.png)
-
-![描述](~@img/img/eolinker/desc.png)
-
-如果你的项目在 eolinker 创建了类似如下的 api，且已经导出为 eolinker.json(命名请君随意，为未来调用的**模块名**)
+如果你的项目在 eolinker 创建了类似如下的 api，且已经导出为 eolinker.json(仅导出 **API 详细说明**即可。命名请君随意，为未来调用的**模块名**)
 
 ![apis](~@img/img//eolinker/apis.png)
 
 那么将 eolinker.json 放入项目中 api 的 module 中，并修改 index.js 为
 
 ```JS
-import { moduleToApi } from "vue-http-hub";
+// /api/index.js
+import { moduleToApi } from "@vislab/http-hub";
 const modulesFiles = require.context("./module", true, /\.(js|json)$/);
 export default moduleToApi(modulesFiles);
 ```
@@ -277,17 +330,54 @@ export default moduleToApi(modulesFiles);
 
 ```JS
 eolinker: [
-{name: "getCase", url: "/test1/getCase", method: "get", desc: "get-case"},
-{name: "postCase", url: "/test1/postCase", method: "post", desc: "测试测试吧"},
-{name: "获取样例", url: "/test1/getDemo", method: "get", desc: "获取样例方法"},
-{name: "putCase", url: "/test1/put", method: "put", desc: "put-case"},
-{name: "deleteCase", url: "/test1/delete", method: "delete", desc: "delete-case"},
-{name: "patchCase", url: "/test1/patch", method: "patch", desc: "patch-case"}]
-
+{name: "getDemo", url: "/test1/demo", method: "get", desc: "get样例"},
+{name: "postDemo", url: "/test1/demo", method: "post", desc: "post样例"},
+{name: "getUserInfo", url: "/test1/userInfo", method: "get", desc: "获取用户信息"},
+{name: "putDemo", url: "/test1/demo", method: "put", desc: "put样例"},
+{name: "deleteDemo", url: "/test1/demo", method: "delete", desc: "delete样例"},
+{name: "patchDemo", url: "/test1/demo", method: "patch", desc: "patch样例"}]
 ```
 
+:::tip
+命名生成规则为：name = camelCase( method + url 最后一级 )
+:::
 现在你可以在项目里使用这种方法请求接口了
 
 ```JS
-this.$API.eolinker.getCase()
+this.$API.eolinker.getDemo()
 ```
+
+## 异构接入
+
+http-hub 推荐的接口响应 schema 为：
+
+```JS
+{
+  code: number,
+  data: any,
+  message: string
+}
+```
+
+如果你的服务端接口并不符合上述的结构，那么 http-hub 会视为异构接入。比如[ REST API 规范](https://standard.rd.github.cn/rest-api/spec/response.html)中，成功的响应直接为 data，失败则只有 error 字段。
+
+对于上述这种情况，成功场景下，http-hub 会为成功的响应包装一层 object，最终转换为：
+
+```JS
+{
+  code: 0,
+  data: 原始响应,
+  message: 'message'
+}
+```
+
+异常场景下，http-hub 会首先去获取 **error.details[0].description** 中描述，包装成为 message 字段。如获取失败，则直接采用 **接口请求异常** 当做提示。最终转换为：
+
+```JS
+{
+ error: 原始错误信息,
+ message: error.details[0].description
+}
+```
+
+在对成功、异常场景的响应体都进行了包装后，就可以按照原 http-hub 逻辑执行啦 🌶

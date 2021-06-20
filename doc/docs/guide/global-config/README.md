@@ -56,7 +56,7 @@ this.s3.moduleName.apiName() // https://example.com/s3_server/apiUrl
 
 ## components
 
-http-hub 的内置异常提示模板包含了三个模块[Message](/API/)，[MessageBox](/API/)，[Notice](/API/)。基本上可以满足日常需求，但是事情往往不遂人愿，有的时候你需要使用自己的主题，有的时候你的组件库并不是[qaxd](http://design.github.com/home/welcome)，因此 http-hub 为每个组件提供了 beforeRender 的组件配置的方式，你可以根据自己的业务场景酌情修改展示内容。
+http-hub 的内置异常提示模板包含了三个模块[Message](/API/)，[MessageBox](/API/)，[Notice](/API/)。基本上可以满足日常需求，但是事情往往不遂人愿，有的时候你需要使用自己的主题，有的时候你的组件库并不是[qaxd](http://design.github.cn/home/welcome)，因此 http-hub 为每个组件提供了 beforeRender 的组件配置的方式，你可以根据自己的业务场景酌情修改展示内容。
 
 比如你的项目中用了[iview](https://www.iviewui.com/)，可以参考下面的配置，将提示模板替换为自定义：
 

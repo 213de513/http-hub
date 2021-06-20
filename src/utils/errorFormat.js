@@ -16,6 +16,10 @@ function showError (type, message, status = "", url = "", { prepend = '', append
 function formatError (error, errorTemp) {
     const url = get(error.response, 'config.url', '')
     const { status, data } = error.response
+    // 如果有error字段 则代表需要进行qax rest api异构
+    if (data.error && Array.isArray(data.error.details)) {
+        data.message = get(data.error, 'details[0].description', '')
+    }
     return formatBase(data, errorTemp, status, url)
 }
 

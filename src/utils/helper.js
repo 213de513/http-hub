@@ -53,11 +53,13 @@ export function moduleToApi (modulesFiles) {
       } else if (fileType === 'json') {
         modules[moduleName] = value.map(api => {
           const { apiName, apiRequestType, apiURI, apiNoteRaw } = api.baseInfo
+          const urlArr = apiURI.split('/')
+          const name = eolinkerType[apiRequestType] + '_' + urlArr[urlArr.length - 1]
           return {
-            name: _.camelCase(apiName),
+            name: _.camelCase(name),
             url: apiURI,
             method: eolinkerType[apiRequestType],
-            desc: apiNoteRaw || apiName
+            desc: apiName || apiNoteRaw
           }
         })
       } else {

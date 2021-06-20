@@ -1,5 +1,5 @@
 /**
- * @author 213de513
+ * @author wangxiang01
  */
 
 import initApi from './main';
@@ -20,7 +20,6 @@ function install (Vue, { apis = {}, axiosConfig = {}, baseURL = {},
   if (Vue) {
     if (install._installed) return
     install._installed = true
-
     debug.status = apiDebug
     console.log('%c 成功加载http-hub v' + pkg.version, 'color: green')
 

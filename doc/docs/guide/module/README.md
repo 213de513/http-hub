@@ -80,7 +80,7 @@ export default {
 
 ```javascript
 // /api/module/user.js
-import { compositionURL } from 'vue-http-hub'
+import { compositionURL } from '@vislab/http-hub'
 const BASE = '/user'
 const API_LIST = [
   {
@@ -106,7 +106,7 @@ export default compositionURL(BASE, API_LIST)
 
 ```javascript
 // /api/index.js
-import { moduleToApi } from 'vue-http-hub'
+import { moduleToApi } from '@vislab/http-hub'
 const modulesFiles = require.context('./module', true, /\.js$/)
 export default moduleToApi(modulesFiles)
 ```
@@ -126,7 +126,7 @@ api
 │   └── xxxx.js // 模块3
 └── index.js // 入口文件
 
-最终的login模块会被转化为app_login，如果有多层文件夹会以此类推。
+最终的login模块会被转化为appLogin，如果有多层文件夹会以此类推。
 ```
 
 ## API 列表配置

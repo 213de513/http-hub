@@ -1,4 +1,4 @@
-import { apiHub, getApiInstance } from 'vue-http-hub'
+import { apiHub, getApiInstance } from '@vislab/http-hub'
 export default {
   methods: {
     logHub () {
